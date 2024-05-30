@@ -1,0 +1,4 @@
+@reboot echo "mask" > /sys/firmware/acpi/interrupts/sci
+@reboot echo "mask" > /sys/firmware/acpi/interrupts/gpe1D
+@reboot echo "disable" > /sys/firmware/acpi/interrupts/sci
+@reboot echo "disable" > /sys/firmware/acpi/interrupts/gpe1D"

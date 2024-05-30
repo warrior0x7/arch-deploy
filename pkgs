@@ -1,0 +1,103 @@
+#!/bin/bash
+
+# Packages to be installed
+# System
+linux                       # Linux kernel
+linux-firmware              # Linux firmware
+intel-ucode                 # Patches for intel firmware
+keyd                        # Manipulate keymaps (e.g. use CAPS as both ESC and CTRL)
+ufw                         # Uncomplicated firewall
+NetworkManager              # Simple network manager
+greetd                      # System greeter
+tuigreet                    # TUI interface for greetd
+acpid                       # Daemon to detect plug/unplug events for headphones
+reflector                   # Select better mirrors for pacman
+xdg-user-dirs               # XDG User Directories (Downloads, Pictures, Videos, etc.)
+cronie                      # Cron jobs
+grub                        # Bootloader
+efibootmgr                  # Boot manager for UEFI
+ntfs-3g                     # Windows' NTFS drivers
+mtools                      # Tools for MS-DOS file system (floppy discs, etc.)
+dosfstools                  # Tools for FAT file systems
+
+# Desktop Environment
+nwg-look                    # Appearance settings (lxappearance for wayland)
+wev                         # Detect key events
+konsole                     # Feature-rich terminal with sixel and bidi support
+kdeconnect                  # Connect phone to computer
+cliphist                    # Clipboard history for wayland
+wl-clipboard                # Clipboard copy/paste for wayland
+fuse2                       # To be able to run AppImages
+mpv                         # Minimal video player
+ffmpeg                      # Rich utility for video conversion and manipulation
+wf-recorder                 # Wayland video recorder
+grim                        # Screenshots
+slurp                       # Region selection
+gammastep                   # Night light for wayland
+keepassxc                   # Password manager
+pamixer                     # Control volume from terminal
+grub-customizer             # GUI app to customize grub
+nm-applet                   # Small applet to control Network Manager
+dunst                       # Notification daemon
+wlr-randr                   # Control screen resolution and fps
+xdg-desktop-portal-wlr      # Wlroots xdg desktop portal
+xorg-xhost                  # Required by gparted and grub-customizer to work (add `xhost + local:` in your autostart script)
+
+# Applications
+gimp                        # GNU Image Manipulation Program
+telegram-desktop            # Telegram (I use it for college)
+
+# Audio server
+pipewire
+pipewire-pulse
+pipewire-jack
+pipewire-alsa
+wireplumber
+
+# Themes
+papirus-icon-theme
+arc-gtk-theme
+
+# Terminal apps
+lf                          # Customizable TUI filemanager
+links                       # Simple web browser
+tmux                        # Terminal multiplexer
+
+# Utilities
+brightnessctl               # Control system brightness easily
+fzf                         # The infamous fuzzy finder
+wtype                       # Auto-typer (i.e. xdotool for wayland)
+curl                        # Fetch webpages from terminal
+wget                        # Simple download utility
+unzip                       # Unzip .zip archives
+bat                         # Better cat
+awk                         # Programming language for text manipulation
+sed                         # Utility for text manipulation
+trash-cli                   # Trash instead of rm(ming) and regretting later
+chafa                       # View images in terminal
+eza                         # Better ls
+sshfs                       # KDEConnect uses it to mount phone over network
+bc                          # Calculator
+jq                          # Parse, create and manipulate JSON
+imagemagick                 # Rich image manipulation from terminal
+ncdu                        # Size analyzer
+
+# Dependencies
+base-devel                  # Common building utilities
+zig                         # To compile river window manager
+wayland-protocols
+scdoc                       # To generate manpages
+libnotify                   # Required by dunst to work
+qt5-tools                   # Required for keepassxc to work properly
+qt6-tools                   # In case something QT6 related requires it
+asciidoctor                 # Required to build keepassxc from source
+imlib2                      # Dependency for nsxiv
+libexif                     # Dependency for nsxiv
+
+# Fonts
+ttf-jetbrains-mono-nerd
+ttf-liberation
+noto-fonts
+noto-fonts-cjk
+noto-fonts-extra
+noto-fonts-emoji

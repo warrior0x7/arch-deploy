@@ -1,0 +1,89 @@
+#!/bin/bash
+
+# Make directory for building packages from source
+[ ! -f ~/build ] && mkdir -p ~/build
+
+# Change default shell to bash
+sudo chsh -s /bin/bash
+
+# Make swapfile
+sudo mkswap -U clear --size 4G --file /swapfile
+sudo printf "%s %s %s %s %01d %01d" "/swapfile" "none" "swap" "defaults" "0" "0" | sudo tee -a /etc/fstab
+
+# Mount swapfile till fstab is loaded on next reboot
+sudo swapon /swapfile
+
+# files to be copied
+#   /etc/greetd/config.toml
+#   /etc/keyd/config.ini
+#   /etc/hosts
+#   /etc/default/grub
+#   /etc/makepkg.conf
+#   /etc/pacman.conf
+
+# ----------------------------------------
+#
+#
+#
+#
+# INSTALL PACKAGES
+#
+#
+#
+#
+# ----------------------------------------
+
+
+# Use better mirrors
+doas reflector -c IT -a 6 -p https --ipv4 --sort rate --save /etc/pacman.d/mirrorlist 
+
+# I use an old BIOS with windows bootloader hardcoded
+sudo mkdir -p /boot/efi/win10
+sudo mount /dev/sda1 /boot/efi/win10/
+sudo cp /boot/efi/EFI/Arch\ Linux/grubx64.efi /boot/efi/win10/EFI/Microsoft/Boot/
+sudo rm /boot/efi/win10/EFI/Microsoft/Boot/bootmgfw.efi 
+sudo mv /boot/efi/win10/EFI/Microsoft/Boot/grubx64.efi /boot/efi/win10/EFI/Microsoft/Boot/bootmgfw.efi
+
+# Disable bitmap fonts
+sudo ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
+
+# Refresh fonts
+fc-cache -vf
+
+# Update XDG user directories
+xdg-user-dirs-update 
+
+# Get wallpapers from my github
+git clone https://github.com/cry0x11/wallpapers ~/Pictures
+
+# Enable services
+sudo systemctl enable acpid keyd NetworkManager greetd ufw sshd cronie
+
+# Enable firewall (ufw)
+sudo ufw enable
+
+# Allow KDEConnect through firewall
+sudo ufw allow 1714:1764/udp
+sudo ufw allow 1714:1764/tcp
+sudo ufw reload
+
+# Install crontab into root to disable acpi interrupts
+cat acpi-interrupts-crontab | sudo crontab -u root
+
+# Add user to groups
+sudo usermod -aG keyd,video,audio,storage,disk,network,input,power user
+
+# Install tmux package manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Build yay
+git clone https://aur.archlinux.org/yay.git ~/build/yay
+(cd ~/build/yay && makepkg -si )      # Credit: https://stackoverflow.com/a/53343636
+
+# Build river
+git clone https://codeberg.org/river/river.git ~/build/river
+(cd ~/build/river && sudo zig build -Dxwayland -Doptimize=ReleaseSafe --prefix /usr/local install)
+
+# Build keepassxc
+git clone https://github.com/keepassxreboot/keepassxc.git ~/build/keepassxc
+(cd ~/build/keepassxc && git checkout latest && mkdir build && cd build && cmake -DWITH_XC_AUTOTYPE=OFF -DWITH_XC_YUBIKEY=OFF -DWITH_XC_BROWSER=OFF -DWITH_XC_SSHAGENT=OFF -DWITH_XC_FDOSECRETS=OFF -DWITH_XC_KEESHARE=OFF -DCMAKE_BUILD_TYPE=Release ..)

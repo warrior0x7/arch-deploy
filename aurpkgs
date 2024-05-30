@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sioyek                      # PDF Reader better than zathura
+wideriver                   # Feature-rich river layout manager
+eww                         # Widgets and bars for system
+lswt                        # List wayland top levels
+ristate                     # IPC for river to integrate eww
+gtklock                     # GTK Locker for wayland inspired by gtk-greet
+swww                        # Nice wallpaper manager
