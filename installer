@@ -57,7 +57,7 @@ xdg-user-dirs-update
 git clone https://github.com/cry0x11/wallpapers ~/Pictures
 
 # Enable services
-sudo systemctl enable acpid keyd NetworkManager greetd ufw sshd cronie
+sudo systemctl enable acpid keyd NetworkManager greetd ufw sshd cronie tlp
 
 # Enable firewall (ufw)
 sudo ufw enable
