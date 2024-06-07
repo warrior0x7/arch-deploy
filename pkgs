@@ -4,7 +4,6 @@
 # System
 linux                       # Linux kernel
 linux-firmware              # Linux firmware
-intel-ucode                 # Patches for intel firmware
 keyd                        # Manipulate keymaps (e.g. use CAPS as both ESC and CTRL)
 ufw                         # Uncomplicated firewall
 NetworkManager              # Simple network manager
@@ -21,6 +20,17 @@ mtools                      # Tools for MS-DOS file system (floppy discs, etc.)
 dosfstools                  # Tools for FAT file systems
 tlp                         # Powersaving utility
 smartmontools               # S.M.A.R.T Disk monitoring tools
+
+# Intel
+intel-ucode                 # Patches for intel firmware
+mesa                        # 3D Acceleration
+lib32-mesa                  # 32-Bit Mesa driver
+vulkan-intel                # Vulkan intel driver
+lib32-vulkan-intel          # 32-Bit Vulkan
+libva-utils                 # Intel VA-API
+libva-intel-driver          # VA-API intel driver
+libva-mesa-driver           # VA-API mesa driver
+mesa-utils                  # For: glxinfo | grep "direct rendering"
 
 # Desktop Environment
 nwg-look                    # Appearance settings (lxappearance for wayland)
