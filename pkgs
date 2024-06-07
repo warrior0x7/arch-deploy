@@ -19,6 +19,8 @@ efibootmgr                  # Boot manager for UEFI
 ntfs-3g                     # Windows' NTFS drivers
 mtools                      # Tools for MS-DOS file system (floppy discs, etc.)
 dosfstools                  # Tools for FAT file systems
+tlp                         # Powersaving utility
+smartmontools               # S.M.A.R.T Disk monitoring tools
 
 # Desktop Environment
 nwg-look                    # Appearance settings (lxappearance for wayland)
