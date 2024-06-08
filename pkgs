@@ -93,6 +93,7 @@ bc                          # Calculator
 jq                          # Parse, create and manipulate JSON
 imagemagick                 # Rich image manipulation from terminal
 ncdu                        # Size analyzer
+fd                          # Better find utility
 
 # Dependencies
 base-devel                  # Common building utilities
