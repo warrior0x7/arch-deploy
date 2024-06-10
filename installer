@@ -58,6 +58,7 @@ git clone https://github.com/cry0x11/wallpapers ~/Pictures
 
 # Enable services
 sudo systemctl enable acpid keyd NetworkManager greetd ufw sshd cronie tlp
+systemctl --user enable pipewire.service pipewire-pulse.service
 
 # Enable firewall (ufw)
 sudo ufw enable
@@ -71,7 +72,7 @@ sudo ufw reload
 cat acpi-interrupts-crontab | sudo crontab -u root
 
 # Add user to groups
-sudo usermod -aG keyd,video,audio,storage,disk,network,input,power user
+sudo usermod -aG keyd,video,audio,storage,disk,network,input,power,seat user
 
 # Install tmux package manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
