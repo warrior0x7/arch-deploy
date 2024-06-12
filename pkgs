@@ -32,6 +32,9 @@ libva-intel-driver          # VA-API intel driver
 libva-mesa-driver           # VA-API mesa driver
 mesa-utils                  # For: glxinfo | grep "direct rendering"
 
+# Firmware for my laptop
+linux-firmware-qlogic
+
 # Desktop Environment
 nwg-look                    # Appearance settings (lxappearance for wayland)
 wev                         # Detect key events
