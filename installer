@@ -35,7 +35,7 @@ sudo swapon /swapfile
 
 
 # Use better mirrors
-doas reflector -c IT -a 6 -p https --ipv4 --sort rate --save /etc/pacman.d/mirrorlist 
+sudo reflector -c IT -a 6 -p https --ipv4 --sort rate --save /etc/pacman.d/mirrorlist 
 
 # I use an old BIOS with windows bootloader hardcoded
 sudo mkdir -p /boot/efi/win10
