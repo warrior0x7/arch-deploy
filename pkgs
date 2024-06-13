@@ -20,6 +20,7 @@ mtools                      # Tools for MS-DOS file system (floppy discs, etc.)
 dosfstools                  # Tools for FAT file systems
 tlp                         # Powersaving utility
 smartmontools               # S.M.A.R.T Disk monitoring tools
+btop                        # System monitoring tool
 
 # Intel
 intel-ucode                 # Patches for intel firmware
@@ -57,6 +58,7 @@ dunst                       # Notification daemon
 wlr-randr                   # Control screen resolution and fps
 xdg-desktop-portal-wlr      # Wlroots xdg desktop portal
 xorg-xhost                  # Required by gparted and grub-customizer to work (add `xhost + local:` in your autostart script)
+neofetch                    # flexing on people
 
 # Applications
 gimp                        # GNU Image Manipulation Program
