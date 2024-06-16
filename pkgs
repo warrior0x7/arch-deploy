@@ -21,6 +21,7 @@ dosfstools                  # Tools for FAT file systems
 tlp                         # Powersaving utility
 smartmontools               # S.M.A.R.T Disk monitoring tools
 btop                        # System monitoring tool
+cpupower                    # Control CPU governor
 
 # Intel
 intel-ucode                 # Patches for intel firmware

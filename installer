@@ -71,6 +71,9 @@ sudo ufw reload
 # Install crontab into root to disable acpi interrupts
 cat acpi-interrupts-crontab | sudo crontab -u root
 
+# Set CPU governor to "ondemand"
+sudo cpupower frequency-set --governor ondemand
+
 # Add user to groups
 sudo usermod -aG keyd,video,audio,storage,disk,network,input,power,seat user
 
