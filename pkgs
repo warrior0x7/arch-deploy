@@ -23,6 +23,11 @@ smartmontools               # S.M.A.R.T Disk monitoring tools
 btop                        # System monitoring tool
 cpupower                    # Control CPU governor
 
+# Virtualization
+libvirt                     # API for controlling VM agents
+spice-vdagent               # Clipboard
+qemu-full                   # VM emulator
+
 # Intel
 intel-ucode                 # Patches for intel firmware
 mesa                        # 3D Acceleration
@@ -34,7 +39,7 @@ libva-intel-driver          # VA-API intel driver
 libva-mesa-driver           # VA-API mesa driver
 mesa-utils                  # For: glxinfo | grep "direct rendering"
 
-# Firmware for my laptop
+# Firmware for my laptop (Pavilion G6)
 linux-firmware-qlogic
 
 # Desktop Environment
@@ -64,6 +69,7 @@ neofetch                    # flexing on people
 # Applications
 gimp                        # GNU Image Manipulation Program
 telegram-desktop            # Telegram (I use it for college)
+firefox-developer-edition   # Web browser
 
 # Audio server
 pipewire
@@ -100,6 +106,8 @@ jq                          # Parse, create and manipulate JSON
 imagemagick                 # Rich image manipulation from terminal
 ncdu                        # Size analyzer
 fd                          # Better find utility
+weechat                     # IRC client
+shellcheck                  # Check scripts for errors
 
 # Dependencies
 base-devel                  # Common building utilities
@@ -120,3 +128,4 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-extra
 noto-fonts-emoji
+terminus-font

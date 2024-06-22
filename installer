@@ -71,8 +71,14 @@ sudo ufw reload
 # Install crontab into root to disable acpi interrupts
 cat acpi-interrupts-crontab | sudo crontab -u root
 
+# Disable password deny after failed attempts
+echo "deny = 0" | sudo tee -a /etc/security/faillock.conf
+
 # Set CPU governor to "ondemand"
-sudo cpupower frequency-set --governor ondemand
+echo "governor='ondemand'" | sudo tee -a /etc/default/cpupower
+
+# Append to PATH
+echo "PATH=\"\$PATH:$HOME/.local/bin\"" | sudo tee -a /etc/environment
 
 # Add user to groups
 sudo usermod -aG keyd,video,audio,storage,disk,network,input,power,seat user

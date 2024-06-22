@@ -1,13 +1,20 @@
 #!/bin/bash
 
-sioyek-git                  # PDF Reader better than zathura
-wideriver                   # Feature-rich river layout manager
-eww                         # Widgets and bars for system
-lswt                        # List wayland top levels
-ristate                     # IPC for river to integrate eww
-gtklock                     # GTK Locker for wayland inspired by gtk-greet
-swww                        # Nice wallpaper manager
+# System
 ast-firmware                # Firmware for my laptop (Pavilion G6)
 upd72020x-fw                # Firmware for my laptop (Pavilion G6)
+
+# Applications
+sioyek-git                  # PDF Reader better than zathura
 anki-bin                    # Powerful flashcards app
+
+# Desktop environment
 aylurs-gtk-shell            # AGS
+wl-screenrec                # Screen recorder with GPU
+swww                        # Nice wallpaper manager
+gtklock                     # GTK Locker for wayland inspired by gtk-greet
+
+# River window manager
+wideriver                   # Feature-rich river layout manager
+lswt                        # List wayland top levels
+ristate                     # IPC for river to integrate eww
