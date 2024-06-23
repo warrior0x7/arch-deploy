@@ -80,6 +80,9 @@ echo "governor='ondemand'" | sudo tee -a /etc/default/cpupower
 # Append to PATH
 echo "PATH=\"\$PATH:$HOME/.local/bin\"" | sudo tee -a /etc/environment
 
+# Change font into terminus
+echo "FONT=ter-i18b" | sudo tee -a /etc/vconsole.conf
+
 # Add user to groups
 sudo usermod -aG keyd,video,audio,storage,disk,network,input,power,seat user
 

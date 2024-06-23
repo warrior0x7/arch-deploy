@@ -3,6 +3,8 @@
 # System
 ast-firmware                # Firmware for my laptop (Pavilion G6)
 upd72020x-fw                # Firmware for my laptop (Pavilion G6)
+aic94xx-firmware            # Firmware for my laptop (Pavilion G6)
+wd719x-firmware             # Firmware for my laptop (Pavilion G6)
 
 # Applications
 sioyek-git                  # PDF Reader better than zathura
