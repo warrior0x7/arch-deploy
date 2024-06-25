@@ -15,6 +15,7 @@ aylurs-gtk-shell            # AGS
 wl-screenrec                # Screen recorder with GPU
 swww                        # Nice wallpaper manager
 gtklock                     # GTK Locker for wayland inspired by gtk-greet
+fcitx5-skin-ori-git         # Fcitx5 ori theme
 
 # River window manager
 wideriver                   # Feature-rich river layout manager

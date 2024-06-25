@@ -66,6 +66,12 @@ xdg-desktop-portal-wlr      # Wlroots xdg desktop portal
 xorg-xhost                  # Required by gparted and grub-customizer to work (add `xhost + local:` in your autostart script)
 neofetch                    # flexing on people
 
+# Latex
+texlive                     # Most Tex packages
+texlive-langarabic          # Tex Arabic
+texlive-langenglish         # Tex English
+texlive-langcjk             # Tex Chinese
+
 # Applications
 gimp                        # GNU Image Manipulation Program
 telegram-desktop            # Telegram (I use it for college)
