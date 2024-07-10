@@ -83,6 +83,13 @@ pipewire-pulse
 pipewire-jack
 pipewire-alsa
 wireplumber
+easyeffects
+ardour
+calf
+lsp-plugins-lv2
+zam-plugins-lv2
+mda.lv2
+yelp
 
 # Themes
 papirus-icon-theme
