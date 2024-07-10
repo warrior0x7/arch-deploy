@@ -89,6 +89,9 @@ sudo usermod -aG keyd,video,audio,storage,disk,network,input,power,seat user
 # Install tmux package manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# Install easyeffects presets
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/JackHack96/PulseEffects-Presets/master/install.sh)"
+
 # Build yay
 git clone https://aur.archlinux.org/yay.git ~/build/yay
 (cd ~/build/yay && makepkg -si )      # Credit: https://stackoverflow.com/a/53343636
